@@ -1,0 +1,845 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:background="@android:color/white"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:background="#63B8FF"
+        android:layout_width="match_parent"
+        android:layout_height="30dp">
+        <TextView
+            android:id="@+id/theatreinfo_Recy_txt"
+            android:text="你可能想去的影院"
+            android:gravity="left|center"
+            android:layout_marginLeft="15dp"
+            android:textStyle="bold"
+            android:textSize="15sp"
+            android:textColor="#3A5FCD"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent" />
+        <ImageView
+            android:onClick="arrow_button"
+            android:id="@+id/arrow_theatre_recycler_favorite"
+            android:layout_marginRight="15dp"
+            android:layout_gravity="center_vertical"
+            android:gravity="right|center"
+            android:contentDescription="@null"
+            android:background="@android:drawable/arrow_down_float"
+            android:layout_width="18dp"
+            android:layout_height="15dp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/theatre_location_favorite"
+        android:visibility="gone"
+        android:orientation="vertical"
+        android:layout_marginTop="5dp"
+        android:layout_marginLeft="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="62dp">
+        <LinearLayout
+            android:layout_gravity="center_horizontal"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="30dp">
+            <TextView
+                android:gravity="center"
+                android:text="无锡海岸影院城"
+                android:textSize="15sp"
+                android:textStyle="bold"
+                android:textColor="@android:color/black"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent" />
+            <TextView
+                android:layout_marginLeft="15dp"
+                android:gravity="center"
+                android:text="35"
+                android:textStyle="bold"
+                android:textSize="14sp"
+                android:textColor="#CD2626"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent" />
+            <TextView
+                android:gravity="center"
+                android:textSize="14sp"
+                android:textColor="@android:color/black"
+                android:text="元起"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent" />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_marginTop="5dp"
+            android:orientation="horizontal"
+            android:layout_weight="1"
+            android:layout_width="match_parent"
+            android:layout_height="0dp">
+            <TextView
+                android:gravity="center"
+                android:text="热门"
+                android:paddingLeft="7dp"
+                android:paddingRight="7dp"
+                android:layout_gravity="center_horizontal"
+                android:textColor="#CD0000"
+                android:textSize="14sp"
+                android:background="@drawable/shape_rectangle"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent" />
+            <TextView
+                android:paddingLeft="7dp"
+                android:paddingRight="7dp"
+                android:layout_marginLeft="13dp"
+                android:gravity="center"
+                android:text="推荐"
+                android:layout_gravity="center_horizontal"
+                android:textColor="#EE30A7"
+                android:textSize="14sp"
+                android:background="@drawable/shape_rectangle"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent" />
+        </LinearLayout>
+    </LinearLayout>
+    <View
+        android:background="@android:color/white"
+        android:layout_width="match_parent"
+        android:layout_height="6dp"/>
+
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:background="#63B8FF"
+        android:layout_width="match_parent"
+        android:layout_height="30dp">
+        <TextView
+            android:text="梁溪区"
+            android:gravity="left|center"
+            android:layout_marginLeft="15dp"
+            android:textStyle="bold"
+            android:textSize="15sp"
+            android:textColor="#3A5FCD"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent" />
+        <ImageView
+            android:id="@+id/arrow_theatre_recycler_1"
+            android:onClick="arrow_button"
+            android:layout_marginRight="15dp"
+            android:layout_width="18dp"
+            android:layout_height="15dp"
+            android:layout_gravity="center_vertical"
+            android:gravity="right|center"
+            android:contentDescription="@null"
+            android:background="@android:drawable/arrow_down_float"
+             />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/theatre_location1"
+        android:visibility="gone"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:id="@+id/liangxiDis_1"
+            android:orientation="vertical"
+            android:layout_marginTop="5dp"
+            android:layout_marginLeft="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="56dp">
+            <LinearLayout
+                android:layout_gravity="center_horizontal"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="28dp">
+                <TextView
+                    android:gravity="center"
+                    android:text="无锡和平电影院"
+                    android:textSize="15sp"
+                    android:textStyle="bold"
+                    android:textColor="@android:color/black"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent" />
+                <TextView
+                    android:layout_marginLeft="15dp"
+                    android:gravity="center"
+                    android:text="30"
+                    android:textStyle="bold"
+                    android:textSize="14sp"
+                    android:textColor="#CD2626"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent" />
+                <TextView
+                    android:gravity="center"
+                    android:textSize="14sp"
+                    android:textColor="@android:color/black"
+                    android:text="元起"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent" />
+            </LinearLayout>
+
+        </LinearLayout>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#EE799F"/>
+
+        <LinearLayout
+            android:id="@+id/liangxiDis_2"
+            android:orientation="vertical"
+            android:layout_marginTop="5dp"
+            android:layout_marginLeft="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="56dp">
+            <LinearLayout
+                android:layout_gravity="center_horizontal"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="28dp">
+                <TextView
+                    android:gravity="center"
+                    android:text="无锡睦邻国际影城"
+                    android:textSize="15sp"
+                    android:textStyle="bold"
+                    android:textColor="@android:color/black"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent" />
+                <TextView
+                    android:layout_marginLeft="15dp"
+                    android:gravity="center"
+                    android:text="35"
+                    android:textStyle="bold"
+                    android:textSize="14sp"
+                    android:textColor="#CD2626"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent" />
+                <TextView
+                    android:gravity="center"
+                    android:textSize="14sp"
+                    android:textColor="@android:color/black"
+                    android:text="元起"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent" />
+            </LinearLayout>
+            <TextView
+                android:layout_marginTop="5dp"
+                android:layout_gravity="center_horizontal"
+                android:text="无锡市广南路588号"
+                android:textColor="#333333"
+                android:textSize="14sp"
+                android:layout_width="match_parent"
+                android:layout_weight="1"
+                android:layout_height="0dp" />
+        </LinearLayout>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#EE799F"/>
+
+        <LinearLayout
+            android:id="@+id/liangxiDis_3"
+            android:orientation="vertical"
+            android:layout_marginTop="5dp"
+            android:layout_marginLeft="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="56dp">
+            <LinearLayout
+                android:layout_gravity="center_horizontal"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="28dp">
+                <TextView
+                    android:gravity="center"
+                    android:text="无锡大世界影城"
+                    android:textSize="15sp"
+                    android:textStyle="bold"
+                    android:textColor="@android:color/black"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent" />
+                <TextView
+                    android:layout_marginLeft="15dp"
+                    android:gravity="center"
+                    android:text="45"
+                    android:textStyle="bold"
+                    android:textSize="14sp"
+                    android:textColor="#CD2626"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent" />
+                <TextView
+                    android:gravity="center"
+                    android:textSize="14sp"
+                    android:textColor="@android:color/black"
+                    android:text="元起"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent" />
+            </LinearLayout>
+        </LinearLayout>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#EE799F"/>
+
+        <LinearLayout
+            android:id="@+id/liangxiDis_4"
+            android:orientation="vertical"
+            android:layout_marginTop="5dp"
+            android:layout_marginLeft="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="56dp">
+            <LinearLayout
+                android:layout_gravity="center_horizontal"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="28dp">
+                <TextView
+                    android:gravity="center"
+                    android:text="华谊兄弟无锡影院"
+                    android:textSize="15sp"
+                    android:textStyle="bold"
+                    android:textColor="@android:color/black"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent" />
+                <TextView
+                    android:layout_marginLeft="15dp"
+                    android:gravity="center"
+                    android:text="30"
+                    android:textStyle="bold"
+                    android:textSize="14sp"
+                    android:textColor="#CD2626"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent" />
+                <TextView
+                    android:gravity="center"
+                    android:textSize="14sp"
+                    android:textColor="@android:color/black"
+                    android:text="元起"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+    <View
+        android:background="@android:color/white"
+        android:layout_width="match_parent"
+        android:layout_height="6dp"/>
+
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:background="#63B8FF"
+        android:layout_width="match_parent"
+        android:layout_height="30dp">
+        <TextView
+            android:text="锡山区"
+            android:gravity="left|center"
+            android:layout_marginLeft="15dp"
+            android:textStyle="bold"
+            android:textSize="15sp"
+            android:textColor="#3A5FCD"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent" />
+        <ImageView
+            android:id="@+id/arrow_theatre_recycler_2"
+            android:onClick="arrow_button"
+            android:layout_marginRight="15dp"
+            android:layout_gravity="center_vertical"
+            android:gravity="right|center"
+            android:contentDescription="@null"
+            android:background="@android:drawable/arrow_down_float"
+            android:layout_width="18dp"
+            android:layout_height="15dp" />
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/theatre_location2"
+        android:visibility="gone"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:id="@+id/xishanDis_1"
+            android:orientation="vertical"
+            android:layout_marginTop="5dp"
+            android:layout_marginLeft="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="56dp">
+            <LinearLayout
+                android:layout_gravity="center_horizontal"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="28dp">
+                <TextView
+                    android:gravity="center"
+                    android:text="无锡金逸影城IMAX荟聚店"
+                    android:textSize="15sp"
+                    android:textStyle="bold"
+                    android:textColor="@android:color/black"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent" />
+                <TextView
+                    android:layout_marginLeft="15dp"
+                    android:gravity="center"
+                    android:text="38"
+                    android:textStyle="bold"
+                    android:textSize="14sp"
+                    android:textColor="#CD2626"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent" />
+                <TextView
+                    android:gravity="center"
+                    android:textSize="14sp"
+                    android:textColor="@android:color/black"
+                    android:text="元起"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent" />
+            </LinearLayout>
+
+        </LinearLayout>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#EE799F"/>
+
+        <LinearLayout
+            android:id="@+id/xishanDis_2"
+            android:orientation="vertical"
+            android:layout_marginTop="5dp"
+            android:layout_marginLeft="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="56dp">
+            <LinearLayout
+                android:layout_gravity="center_horizontal"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="28dp">
+                <TextView
+                    android:gravity="center"
+                    android:text="SFC上影—无锡东港店"
+                    android:textSize="15sp"
+                    android:textStyle="bold"
+                    android:textColor="@android:color/black"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent" />
+                <TextView
+                    android:layout_marginLeft="15dp"
+                    android:gravity="center"
+                    android:text="35"
+                    android:textStyle="bold"
+                    android:textSize="14sp"
+                    android:textColor="#CD2626"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent" />
+                <TextView
+                    android:gravity="center"
+                    android:textSize="14sp"
+                    android:textColor="@android:color/black"
+                    android:text="元起"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent" />
+            </LinearLayout>
+            <TextView
+                android:layout_marginTop="5dp"
+                android:layout_gravity="center_horizontal"
+                android:text="无锡市锡山区东港镇香山路122号红豆影城3楼"
+                android:textColor="#333333"
+                android:textSize="14sp"
+                android:layout_width="match_parent"
+                android:layout_weight="1"
+                android:layout_height="0dp" />
+        </LinearLayout>
+        </LinearLayout>
+    <View
+        android:background="@android:color/white"
+        android:layout_width="match_parent"
+        android:layout_height="6dp"/>
+
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:background="#63B8FF"
+        android:layout_width="match_parent"
+        android:layout_height="30dp">
+        <TextView
+            android:text="惠山区"
+            android:gravity="left|center"
+            android:layout_marginLeft="15dp"
+            android:textStyle="bold"
+            android:textSize="15sp"
+            android:textColor="#3A5FCD"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent" />
+        <ImageView
+            android:id="@+id/arrow_theatre_recycler_3"
+            android:onClick="arrow_button"
+            android:layout_marginRight="15dp"
+            android:layout_gravity="center_vertical"
+            android:gravity="right|center"
+            android:contentDescription="@null"
+            android:background="@android:drawable/arrow_down_float"
+            android:layout_width="18dp"
+            android:layout_height="15dp" />
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/theatre_location3"
+        android:visibility="gone"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:id="@+id/huishanDis_1"
+            android:orientation="vertical"
+            android:layout_marginTop="5dp"
+            android:layout_marginLeft="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="56dp">
+            <LinearLayout
+                android:layout_gravity="center_horizontal"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="28dp">
+                <TextView
+                    android:gravity="center"
+                    android:text="无锡中传国际影城"
+                    android:textSize="15sp"
+                    android:textStyle="bold"
+                    android:textColor="@android:color/black"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent" />
+                <TextView
+                    android:layout_marginLeft="15dp"
+                    android:gravity="center"
+                    android:text="45"
+                    android:textStyle="bold"
+                    android:textSize="14sp"
+                    android:textColor="#CD2626"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent" />
+                <TextView
+                    android:gravity="center"
+                    android:textSize="14sp"
+                    android:textColor="@android:color/black"
+                    android:text="元起"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent" />
+            </LinearLayout>
+        </LinearLayout>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#EE799F"/>
+
+        <LinearLayout
+            android:id="@+id/huishanDis_2"
+            android:orientation="vertical"
+            android:layout_marginTop="5dp"
+            android:layout_marginLeft="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="56dp">
+            <LinearLayout
+                android:layout_gravity="center_horizontal"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="28dp">
+                <TextView
+                    android:gravity="center"
+                    android:text="无锡新影联影城"
+                    android:textSize="15sp"
+                    android:textStyle="bold"
+                    android:textColor="@android:color/black"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent" />
+                <TextView
+                    android:layout_marginLeft="15dp"
+                    android:gravity="center"
+                    android:text="35"
+                    android:textStyle="bold"
+                    android:textSize="14sp"
+                    android:textColor="#CD2626"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent" />
+                <TextView
+                    android:gravity="center"
+                    android:textSize="14sp"
+                    android:textColor="@android:color/black"
+                    android:text="元起"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+    <View
+        android:background="@android:color/white"
+        android:layout_width="match_parent"
+        android:layout_height="6dp"/>
+
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:background="#63B8FF"
+        android:layout_width="match_parent"
+        android:layout_height="30dp">
+        <TextView
+            android:text="滨湖区"
+            android:gravity="left|center"
+            android:layout_marginLeft="15dp"
+            android:textStyle="bold"
+            android:textSize="15sp"
+            android:textColor="#3A5FCD"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent" />
+        <ImageView
+            android:id="@+id/arrow_theatre_recycler_4"
+            android:onClick="arrow_button"
+            android:layout_marginRight="15dp"
+            android:layout_gravity="center_vertical"
+            android:gravity="right|center"
+            android:contentDescription="@null"
+            android:background="@android:drawable/arrow_down_float"
+            android:layout_width="18dp"
+            android:layout_height="15dp" />
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/theatre_location4"
+        android:visibility="gone"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:id="@+id/binghuDis_1"
+            android:orientation="vertical"
+            android:layout_marginTop="5dp"
+            android:layout_marginLeft="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="56dp">
+            <LinearLayout
+                android:layout_gravity="center_horizontal"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="28dp">
+                <TextView
+                    android:gravity="center"
+                    android:text="无锡橙天嘉禾影城—新之城店"
+                    android:textSize="15sp"
+                    android:textStyle="bold"
+                    android:textColor="@android:color/black"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent" />
+                <TextView
+                    android:layout_marginLeft="15dp"
+                    android:gravity="center"
+                    android:text="30"
+                    android:textStyle="bold"
+                    android:textSize="14sp"
+                    android:textColor="#CD2626"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent" />
+                <TextView
+                    android:gravity="center"
+                    android:textSize="14sp"
+                    android:textColor="@android:color/black"
+                    android:text="元起"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent" />
+            </LinearLayout>
+
+        </LinearLayout>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#EE799F"/>
+
+        <LinearLayout
+            android:id="@+id/binghuDis_2"
+            android:orientation="vertical"
+            android:layout_marginTop="5dp"
+            android:layout_marginLeft="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="56dp">
+            <LinearLayout
+                android:layout_gravity="center_horizontal"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="28dp">
+                <TextView
+                    android:gravity="center"
+                    android:text="万达影城"
+                    android:textSize="15sp"
+                    android:textStyle="bold"
+                    android:textColor="@android:color/black"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent" />
+                <TextView
+                    android:layout_marginLeft="15dp"
+                    android:gravity="center"
+                    android:text="25"
+                    android:textStyle="bold"
+                    android:textSize="14sp"
+                    android:textColor="#CD2626"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent" />
+                <TextView
+                    android:gravity="center"
+                    android:textSize="14sp"
+                    android:textColor="@android:color/black"
+                    android:text="元起"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent" />
+            </LinearLayout>
+            <TextView
+                android:layout_marginTop="5dp"
+                android:layout_gravity="center_horizontal"
+                android:text="无锡市梁溪路35号万达广场3楼"
+                android:textColor="#333333"
+                android:textSize="14sp"
+                android:layout_width="match_parent"
+                android:layout_weight="1"
+                android:layout_height="0dp" />
+        </LinearLayout>
+    </LinearLayout>
+    <View
+        android:background="@android:color/white"
+        android:layout_width="match_parent"
+        android:layout_height="6dp"/>
+
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:background="#63B8FF"
+        android:layout_width="match_parent"
+        android:layout_height="30dp">
+        <TextView
+            android:text="新吴区"
+            android:gravity="left|center"
+            android:layout_marginLeft="15dp"
+            android:textStyle="bold"
+            android:textSize="15sp"
+            android:textColor="#3A5FCD"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent" />
+        <ImageView
+            android:id="@+id/arrow_theatre_recycler_5"
+            android:onClick="arrow_button"
+            android:layout_marginRight="15dp"
+            android:layout_gravity="center_vertical"
+            android:gravity="right|center"
+            android:contentDescription="@null"
+            android:background="@android:drawable/arrow_down_float"
+            android:layout_width="18dp"
+            android:layout_height="15dp" />
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/theatre_location5"
+        android:visibility="gone"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:id="@+id/xinwuDis_1"
+            android:orientation="vertical"
+            android:layout_marginTop="5dp"
+            android:layout_marginLeft="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="56dp">
+            <LinearLayout
+                android:layout_gravity="center_horizontal"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="28dp">
+                <TextView
+                    android:gravity="center"
+                    android:text="SFC上影—无锡硕放店"
+                    android:textSize="15sp"
+                    android:textStyle="bold"
+                    android:textColor="@android:color/black"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent" />
+                <TextView
+                    android:layout_marginLeft="15dp"
+                    android:gravity="center"
+                    android:text="35"
+                    android:textStyle="bold"
+                    android:textSize="14sp"
+                    android:textColor="#CD2626"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent" />
+                <TextView
+                    android:gravity="center"
+                    android:textSize="14sp"
+                    android:textColor="@android:color/black"
+                    android:text="元起"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent" />
+            </LinearLayout>
+            <TextView
+                android:layout_marginTop="5dp"
+                android:layout_gravity="center_horizontal"
+                android:text="无锡市新吴路硕放通详路硕放商业广场1至5号楼三楼"
+                android:textColor="#333333"
+                android:textSize="14sp"
+                android:layout_width="match_parent"
+                android:layout_weight="1"
+                android:layout_height="0dp" />
+
+        </LinearLayout>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#EE799F"/>
+
+        <LinearLayout
+            android:id="@+id/xinwuDis_2"
+            android:orientation="vertical"
+            android:layout_marginTop="5dp"
+            android:layout_marginLeft="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="56dp">
+            <LinearLayout
+                android:layout_gravity="center_horizontal"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="28dp">
+                <TextView
+                    android:gravity="center"
+                    android:text="中影国际影城—宝龙店"
+                    android:textSize="15sp"
+                    android:textStyle="bold"
+                    android:textColor="@android:color/black"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent" />
+                <TextView
+                    android:layout_marginLeft="15dp"
+                    android:gravity="center"
+                    android:text="32"
+                    android:textStyle="bold"
+                    android:textSize="14sp"
+                    android:textColor="#CD2626"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent" />
+                <TextView
+                    android:gravity="center"
+                    android:textSize="14sp"
+                    android:textColor="@android:color/black"
+                    android:text="元起"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent" />
+            </LinearLayout>
+            <TextView
+                android:layout_marginTop="5dp"
+                android:layout_gravity="center_horizontal"
+                android:text="无锡市新吴路旺庄路188号宝龙城市广场4楼"
+                android:textColor="#333333"
+                android:textSize="14sp"
+                android:layout_width="match_parent"
+                android:layout_weight="1"
+                android:layout_height="0dp" />
+        </LinearLayout>
+    </LinearLayout>
+    <View
+        android:background="@android:color/white"
+        android:layout_width="match_parent"
+        android:layout_height="6dp"/>
+</LinearLayout>

@@ -1,0 +1,300 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#EDEDED"
+    android:orientation="vertical"
+    tools:context="cn.studyjams.s1.sj52.theatreorder.ChooseSeatActivity">
+
+
+    <TextView
+        android:id="@+id/actionCutting_Title"
+        android:background="#3A5FCD"
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:layout_gravity="center_horizontal"
+        android:gravity="center"
+        android:textColor="@android:color/white"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+
+    <LinearLayout
+        android:divider="@drawable/divider"
+        android:showDividers="end"
+        android:dividerPadding="1dp"
+        android:orientation="vertical"
+        android:background="@android:color/white"
+        android:layout_width="match_parent"
+        android:layout_height="56dp">
+        <TextView
+            android:id="@+id/filmTitle"
+            android:paddingLeft="14dp"
+            android:layout_gravity="center_horizontal"
+            android:textStyle="bold"
+            android:textSize="15sp"
+            android:textColor="@android:color/black"
+            android:layout_width="match_parent"
+            android:layout_height="29dp" />
+        <LinearLayout
+            android:id="@+id/filmTitleInfo"
+            android:paddingLeft="14dp"
+            android:orientation="horizontal"
+            android:layout_gravity="center_horizontal"
+            android:layout_width="match_parent"
+            android:layout_weight="1"
+            android:layout_height="0dp" >
+
+            <TextView
+                android:id="@+id/day_txt"
+                android:text="今日"
+                android:gravity="start|center"
+                android:textColor="@android:color/black"
+                android:textSize="14sp"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent" />
+            <TextView
+                android:id="@+id/time_txt"
+                android:layout_marginLeft="10dp"
+                android:gravity="start|center"
+                android:textColor="@android:color/black"
+                android:textSize="14sp"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent" />
+            <TextView
+                android:id="@+id/ActionCutting_txt"
+                android:layout_marginLeft="10dp"
+                android:gravity="start|center"
+                android:textColor="@android:color/black"
+                android:textSize="14sp"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent" />
+        </LinearLayout>
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/bookingInfo"
+        android:orientation="horizontal"
+        android:background="@android:color/white"
+        android:layout_width="match_parent"
+        android:weightSum="4"
+        android:layout_height="32dp">
+        <TextView
+            android:id="@+id/booking_text1"
+            android:layout_marginTop="2dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginBottom="3dp"
+            android:layout_marginRight="15dp"
+            android:background="@drawable/shape_bookingticket"
+            android:gravity="center"
+            android:textStyle="bold"
+            android:textColor="#7D9EC0"
+            android:textSize="13sp"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="match_parent" />
+        <TextView
+            android:id="@+id/booking_text2"
+            android:layout_marginTop="2dp"
+            android:layout_marginBottom="3dp"
+            android:layout_marginRight="15dp"
+            android:background="@drawable/shape_bookingticket"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:textColor="#7D9EC0"
+            android:textSize="13sp"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="match_parent" />
+        <TextView
+            android:id="@+id/booking_text3"
+            android:layout_marginTop="2dp"
+            android:layout_marginBottom="3dp"
+            android:layout_marginRight="15dp"
+            android:background="@drawable/shape_bookingticket"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:textColor="#7D9EC0"
+            android:textSize="13sp"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="match_parent" />
+        <TextView
+            android:id="@+id/booking_text4"
+            android:layout_marginTop="2dp"
+            android:layout_marginBottom="3dp"
+            android:layout_marginRight="15dp"
+            android:background="@drawable/shape_bookingticket"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:textColor="#7D9EC0"
+            android:textSize="13sp"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="match_parent" />
+    </LinearLayout>
+
+    <FrameLayout
+        android:background="#E3E3E3"
+        android:layout_weight="1"
+        android:layout_width="match_parent"
+        android:layout_height="0dp">
+        <!--3号厅-->
+        <RelativeLayout
+            android:id="@+id/chooseSeat_UI"
+            android:orientation="vertical"
+            android:layout_height="match_parent"
+            android:layout_width="match_parent">
+           <RelativeLayout
+                android:layout_height="wrap_content"
+                android:layout_width="fill_parent"
+                android:id="@+id/seat1">
+
+                <ImageView
+                    android:background="@drawable/movie_buy_screen"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:id="@+id/imageView1"
+                    android:layout_margin="10dp"
+                    android:layout_centerInParent="true"/>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:orientation="horizontal"
+                android:layout_height="wrap_content"
+                android:layout_width="fill_parent"
+                android:id="@+id/seat2"
+                android:layout_alignTop="@id/seat1">
+
+                <TextView
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:id="@+id/movie_buy_hall_info"
+                    android:layout_centerInParent="true"
+                    android:textSize="14sp"
+                    android:textColor="#708090"
+                    android:textStyle="bold"
+                    android:text="3号厅"
+                    android:gravity="center_horizontal"/>
+
+                <ImageView
+                    android:layout_height="40dp"
+                    android:layout_width="40dp"
+                    android:id="@+id/setViewZoom"
+                    android:src="@drawable/movie_tobig"
+                    android:layout_alignParentRight="true"/>
+            </RelativeLayout>
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_height="fill_parent"
+                android:layout_width="fill_parent"
+                android:id="@+id/seat3"
+                android:layout_below="@id/seat2"
+                android:padding="10dp">
+
+                <RelativeLayout
+                    android:layout_height="fill_parent"
+                    android:layout_width="fill_parent">
+                    <ScrollView
+                        android:layout_height="wrap_content"
+                        android:layout_width="fill_parent"
+                        android:scrollbars="none">
+                        <LinearLayout
+                            android:orientation="horizontal"
+                            android:layout_height="wrap_content"
+                            android:layout_width="fill_parent">
+                            <LinearLayout
+                                android:orientation="vertical"
+                                android:layout_height="match_parent"
+                                android:layout_width="wrap_content"
+                                android:id="@+id/seatRaw"
+                                android:gravity="left">
+                            </LinearLayout>
+                            <HorizontalScrollView
+                                android:layout_height="wrap_content"
+                                android:layout_width="match_parent"
+                                android:layout_marginRight="5dp"
+                                android:scrollbars="none"
+                                android:layout_marginLeft="5dp"
+                                android:layout_marginBottom="10dp"
+                                android:layout_gravity="top|center_horizontal">
+                                <LinearLayout
+                                    android:orientation="horizontal"
+                                    android:layout_height="wrap_content"
+                                    android:layout_width="wrap_content"
+                                    android:id="@+id/seatViewCont">
+                                </LinearLayout>
+
+                            </HorizontalScrollView>
+
+                        </LinearLayout>
+
+                    </ScrollView>
+
+                </RelativeLayout>
+
+            </LinearLayout>
+
+        </RelativeLayout>
+    </FrameLayout>
+
+    <LinearLayout
+        android:background="#E3E3E3"
+        android:gravity="center"
+        android:layout_marginBottom="35dp"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="30dp">
+
+        <TextView
+            android:drawableLeft="@drawable/movie_seat_ok_small"
+            android:textColor="@android:color/black"
+            android:layout_marginRight="12dp"
+            android:gravity="center"
+            android:layout_width="wrap_content"
+            android:textSize="13sp"
+            android:text="可选"
+            android:layout_height="match_parent" />
+        <TextView
+            android:drawableLeft="@drawable/movie_seat_sold_small"
+            android:textColor="@android:color/black"
+            android:layout_marginRight="12dp"
+            android:gravity="center"
+            android:layout_width="wrap_content"
+            android:textSize="13sp"
+            android:text="已售"
+            android:layout_height="match_parent" />
+        <TextView
+            android:drawableLeft="@drawable/movie_seat_repair_small"
+            android:textColor="@android:color/black"
+            android:layout_marginRight="12dp"
+            android:gravity="center"
+            android:layout_width="wrap_content"
+            android:textSize="13sp"
+            android:text="维修"
+            android:layout_height="match_parent" />
+        <TextView
+            android:drawableLeft="@drawable/movie_seat_couplesweet_small"
+            android:textColor="@android:color/black"
+            android:layout_marginRight="12dp"
+            android:gravity="center"
+            android:layout_width="wrap_content"
+            android:textSize="13sp"
+            android:text="情侣座"
+            android:layout_height="match_parent" />
+        <TextView
+            android:drawableLeft="@drawable/movie_seat_select_small"
+            android:textColor="@android:color/black"
+            android:gravity="center"
+            android:layout_width="wrap_content"
+            android:textSize="13sp"
+            android:text="选中"
+            android:layout_height="match_parent" />
+    </LinearLayout>
+
+
+</LinearLayout>
+
+
+

@@ -1,0 +1,410 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:paddingBottom="0dp"
+    android:paddingLeft="0dp"
+    android:paddingRight="0dp"
+    android:paddingTop="0dp"
+    android:background="#EDEDED"
+    tools:context=".MainActivity">
+
+    <FrameLayout
+        android:id="@+id/main_UI"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_weight="1"
+        android:layout_height="0dp">
+        <!--以下是第一块UI内容 -->
+        <LinearLayout
+            android:id="@+id/linearUI_home"
+            android:background="#EBEBEB"
+            android:visibility="visible"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <LinearLayout
+                android:background="#3A5FCD"
+                android:layout_gravity="center_horizontal"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="55dp">
+                <ImageView
+                    android:src="@drawable/icon_round"
+                    android:layout_gravity="center_vertical"
+                    android:layout_width="22dp"
+                    android:layout_height="27dp" />
+                <TextView
+                    android:layout_marginLeft="3dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:text="@string/home_icon_tx"
+                    android:textColor="@android:color/white"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="20dp"
+                android:layout_marginLeft="12dp"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="18dp">
+                <View
+                    android:layout_gravity="center_vertical"
+                    android:background="#3A5FCD"
+                    android:layout_width="5dp"
+                    android:layout_height="match_parent"/>
+                <TextView
+                    android:layout_marginLeft="7dp"
+                    android:layout_gravity="center_vertical"
+                    android:textStyle="bold"
+                    android:textColor="#3A5FCD"
+                    android:textSize="14sp"
+                    android:text="@string/recommendation"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent" />
+            </LinearLayout>
+            <LinearLayout
+                android:weightSum="3"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="145dp">
+                <ImageView
+                    android:src="@drawable/recommendation1"
+                    android:layout_weight="1"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent" />
+                <ImageView
+                    android:src="@drawable/recommendation2"
+                    android:layout_weight="1"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent" />
+                <ImageView
+                    android:src="@drawable/recommendation3"
+                    android:layout_weight="1"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent" />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="20dp"
+                android:layout_marginLeft="12dp"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="18dp">
+                <View
+                    android:layout_gravity="center_vertical"
+                    android:background="#3A5FCD"
+                    android:layout_width="5dp"
+                    android:layout_height="match_parent"/>
+                <TextView
+                    android:layout_marginLeft="7dp"
+                    android:layout_gravity="center_vertical"
+                    android:textStyle="bold"
+                    android:textColor="#3A5FCD"
+                    android:textSize="14sp"
+                    android:text="@string/news"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent" />
+            </LinearLayout>
+
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <LinearLayout
+                    android:layout_marginLeft="12dp"
+                    android:layout_marginRight="12dp"
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+                    <TextView
+                        android:id="@+id/news_txt1"
+                        android:drawableLeft="@drawable/news_pic1"
+                        android:onClick="getNewsDetails"
+                        android:gravity="left|center"
+                        android:background="@android:color/white"
+                        android:layout_marginBottom="6dp"
+                        android:textSize="14sp"
+                        android:text="@string/news_pic1_txt"
+                        android:textStyle="bold"
+                        android:textColor="@android:color/black"
+                        android:padding="4dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp" />
+                    <TextView
+                        android:id="@+id/news_txt2"
+                        android:drawableLeft="@drawable/news_pic2"
+                        android:onClick="getNewsDetails"
+                        android:gravity="left|center"
+                        android:background="@android:color/white"
+                        android:layout_marginBottom="6dp"
+                        android:text="@string/news_pic2_txt"
+                        android:textSize="14sp"
+                        android:textStyle="bold"
+                        android:textColor="@android:color/black"
+                        android:padding="4dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp" />
+                    <TextView
+                        android:id="@+id/news_txt3"
+                        android:drawableLeft="@drawable/news_pic3"
+                        android:onClick="getNewsDetails"
+                        android:gravity="left|center"
+                        android:background="@android:color/white"
+                        android:layout_marginBottom="6dp"
+                        android:textSize="14sp"
+                        android:text="@string/news_pic3_txt"
+                        android:textStyle="bold"
+                        android:textColor="@android:color/black"
+                        android:padding="4dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp" />
+                    <TextView
+                        android:id="@+id/news_txt4"
+                        android:drawableLeft="@drawable/news_pic4"
+                        android:onClick="getNewsDetails"
+                        android:gravity="left|center"
+                        android:background="@android:color/white"
+                        android:layout_marginBottom="6dp"
+                        android:text="@string/news_pic4_txt"
+                        android:textSize="14sp"
+                        android:textStyle="bold"
+                        android:textColor="@android:color/black"
+                        android:padding="4dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp" />
+                    <TextView
+                        android:id="@+id/news_txt5"
+                        android:drawableLeft="@drawable/news_pic5"
+                        android:onClick="getNewsDetails"
+                        android:gravity="left|center"
+                        android:background="@android:color/white"
+                        android:layout_marginBottom="6dp"
+                        android:text="@string/news_pic5_txt"
+                        android:textSize="14sp"
+                        android:textStyle="bold"
+                        android:textColor="@android:color/black"
+                        android:padding="4dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp" />
+
+                </LinearLayout>
+            </ScrollView>
+        </LinearLayout> <!--  以上是第一块UI内容 -->
+
+        <!--以下是第2块UI内容 -->
+        <LinearLayout
+            android:id="@+id/linearUI_theatreInfo"
+            android:visibility="invisible"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <FrameLayout
+                android:background="#3A5FCD"
+                android:layout_width="match_parent"
+                android:layout_height="55dp">
+                <TextView
+                    android:id="@+id/location_text"
+                    android:layout_marginLeft="8dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="left|center"
+                    android:layout_gravity="center_horizontal"
+                    android:text="@string/location_tx"
+                    android:textColor="@android:color/white"
+                    android:textSize="16sp"
+                    android:textStyle="bold"  />
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center_horizontal"
+                    android:gravity="center"
+                    android:text="@string/title_theatre_situation"
+                    android:textColor="@android:color/white"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+            </FrameLayout>
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/Recy_theatreInfo"
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                app:layoutManager="android.support.v7.widget.LinearLayoutManager"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_weight="1"
+                android:layout_height="0dp">
+            </android.support.v7.widget.RecyclerView>
+        </LinearLayout> <!--以上是第2块UI内容 -->
+
+        <!--以下是第三块UI内容 -->
+        <LinearLayout
+            android:id="@+id/linearUI_ticketOrder"
+            android:background="#FFFFFF"
+            android:visibility="invisible"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <TextView
+                android:background="#3A5FCD"
+                android:layout_width="match_parent"
+                android:layout_height="55dp"
+                android:layout_gravity="center_horizontal"
+                android:gravity="center"
+                android:text="@string/arrange_tx"
+                android:textColor="@android:color/white"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+            <TextView
+                android:text="无锡海岸影院城"
+                android:id="@+id/ticket_location_title"
+                android:background="@android:color/white"
+                android:gravity="center"
+                android:layout_gravity="center_horizontal"
+                android:textSize="15sp"
+                android:textStyle="bold"
+                android:textColor="@android:color/black"
+                android:layout_width="match_parent"
+                android:layout_height="40dp" />
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/Recy_ticketOrder_poker"
+                android:background="@drawable/backgroundpoker"
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                app:layoutManager="android.support.v7.widget.LinearLayoutManager"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="120dp">
+            </android.support.v7.widget.RecyclerView>
+            <TextView
+                android:id="@+id/filmName_selected"
+                android:text="星际迷航3：超越星辰"
+                android:background="@android:color/white"
+                android:gravity="center"
+                android:layout_gravity="center_horizontal"
+                android:textSize="15sp"
+                android:textColor="@android:color/black"
+                android:layout_width="match_parent"
+                android:layout_height="29dp" />
+            <TextView
+                android:text="@string/notice"
+                android:gravity="center"
+                android:textColor="@android:color/holo_red_light"
+                android:textStyle="bold"
+                android:textSize="13sp"
+                android:background="#FFEC8B"
+                android:layout_width="match_parent"
+                android:layout_height="20dp" />
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/Recy_ticketDate"
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                app:layoutManager="android.support.v7.widget.LinearLayoutManager"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="32dp">
+            </android.support.v7.widget.RecyclerView>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#D1EEEE"/>
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/Recy_ticketActionCutting"
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                app:layoutManager="android.support.v7.widget.LinearLayoutManager"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_weight="1"
+                android:layout_height="0dp">
+            </android.support.v7.widget.RecyclerView>
+
+        </LinearLayout> <!--以上是第三块UI内容 -->
+    </FrameLayout>
+
+
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#CDC1C5"/>
+
+    <LinearLayout
+        android:id="@+id/title"
+        android:orientation="horizontal"
+        android:weightSum="3"
+        android:layout_width="match_parent"
+        android:layout_height="52dp" >
+
+        <LinearLayout
+            android:id="@+id/title_home"
+            android:orientation="vertical"
+            android:layout_marginTop="1dp"
+            android:layout_marginBottom="1dp"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="match_parent">
+            <ImageView
+                android:id="@+id/home"
+                android:layout_gravity="center_horizontal"
+                android:layout_width="33dp"
+                android:layout_height="33dp"
+                android:src="@drawable/home"/>
+            <TextView
+                android:gravity="center"
+                android:layout_gravity="center_horizontal"
+                android:text="@string/title_home"
+                android:textSize="12sp"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/title_theatre_situation"
+            android:orientation="vertical"
+            android:layout_marginTop="1dp"
+            android:layout_marginBottom="1dp"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="match_parent">
+            <ImageView
+                android:id="@+id/theatre_info"
+                android:layout_gravity="center_horizontal"
+                android:layout_width="34dp"
+                android:layout_height="32dp"
+                android:src="@drawable/title_theatre_info"/>
+            <TextView
+                android:gravity="center"
+                android:layout_gravity="center_horizontal"
+                android:text="@string/title_theatre_situation"
+                android:textSize="12sp"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/title_order_ticket"
+            android:orientation="vertical"
+            android:layout_marginTop="1dp"
+            android:layout_marginBottom="1dp"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="match_parent">
+            <ImageView
+                android:id="@+id/ticket_order"
+                android:layout_gravity="center_horizontal"
+                android:layout_width="33dp"
+                android:layout_height="33dp"
+                android:src="@drawable/title_ticket_order"/>
+            <TextView
+                android:gravity="center"
+                android:layout_gravity="center_horizontal"
+                android:text="@string/title_order_ticket"
+                android:textSize="12sp"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,30 @@
+<resources>
+    <string name="app_name">购 票 儿</string>
+    <string name="title_home">首 页</string>
+    <string name="title_order_ticket">订座</string>
+    <string name="title_theatre_situation">影 院</string>
+    <string name="location_tx">无锡</string>
+    <string name="arrange_tx">排 期</string>
+    <string name="home_icon_tx">订 票 儿</string>
+    <string name="recommendation">热门推荐</string>
+    <string name="news">最新资讯</string>
+    <string name="notice">温馨提示： 电影开映前15分钟内订票无效。</string>
+    <string name="news_pic1_txt">2016年9月内地影市前瞻</string>
+    <string name="news_pic2_txt">暑期档今年格外“冷”</string>
+    <string name="news_pic3_txt">2016年8月中国内地影市前瞻</string>
+    <string name="news_pic4_txt">2016年7月内地影市前瞻</string>
+    <string name="news_pic5_txt">2016年上半年中国票房最佳Top10</string>
+    <string name="action_settings">设置</string>
+    <string name="movie_seat_repair_txt">修理</string>
+    <string name="movie_seat_ok_txt">可选</string>
+    <string name="movie_seat_sold_txt">已售</string>
+    <string name="movie_seat_select_txt">选中</string>
+    <!--<string name="favoratelocation_tx">你可能想去的影院</string>-->
+    <!--<string name="location_tx1">梁溪区</string>-->
+    <!--<string name="location_tx2">锡山区</string>-->
+    <!--<string name="location_tx3">惠山区</string>-->
+    <!--<string name="location_tx4">滨湖区</string>-->
+    <!--<string name="location_tx5">新吴区</string>-->
+
+
+</resources>

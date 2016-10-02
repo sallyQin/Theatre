@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <LinearLayout
+        android:orientation="horizontal"
+        android:weightSum="3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:layout_gravity="center_horizontal"
+            android:orientation="vertical"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="70dp">
+            <TextView
+                android:id="@+id/startTime"
+                android:gravity="center"
+                android:textColor="@android:color/black"
+                android:textStyle="bold"
+                android:textSize="18dp"
+                android:layout_width="match_parent"
+                android:layout_height="38dp" />
+            <TextView
+                android:id="@+id/endTime"
+                android:textColor="@android:color/black"
+                android:text="13dp"
+                android:gravity="center|top"
+                android:layout_weight="1"
+                android:layout_width="match_parent"
+                android:layout_height="0dp" />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_gravity="center_horizontal"
+            android:orientation="vertical"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="70dp">
+            <TextView
+                android:id="@+id/edition"
+                android:gravity="center"
+                android:textColor="@android:color/black"
+                android:textSize="13sp"
+                android:layout_width="match_parent"
+                android:layout_height="38dp" />
+            <TextView
+                android:id="@+id/projectionHall"
+                android:textColor="@android:color/black"
+                android:textSize="13sp"
+                android:gravity="center|top"
+                android:layout_weight="1"
+                android:layout_width="match_parent"
+                android:layout_height="0dp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_gravity="center_horizontal"
+            android:orientation="horizontal"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="70dp">
+            <TextView
+                android:gravity="center"
+                android:layout_marginLeft="15dp"
+                android:text="￥"
+                android:textColor="#CD0000"
+                android:textSize="15sp"
+                android:layout_width="wrap_content"
+                android:layout_height="60dp" />
+            <TextView
+                android:id="@+id/price"
+                android:textStyle="bold"
+                android:textColor="#CD0000"
+                android:textSize="20sp"
+                android:layout_width="wrap_content"
+                android:layout_height="60dp" />
+        </LinearLayout>
+    </LinearLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#CDC9C9"/>
+
+</LinearLayout>
