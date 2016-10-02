@@ -28,6 +28,9 @@ public class MainActivity extends AppCompatActivity {
     ImageView home_image;
     ImageView theatreInfo_image;
     ImageView ticketOrder_image;
+    ImageView hotRecommendation1;
+    ImageView hotRecommendation2;
+    ImageView hotRecommendation3;
     TextView location_text;
     TextView fileName_text;
     TextView ticket_location_title;
@@ -59,6 +62,12 @@ public class MainActivity extends AppCompatActivity {
         recy_ticketDate = (RecyclerView) findViewById(R.id.Recy_ticketDate);
         recy_ticketActionCutting = (RecyclerView) findViewById(R.id.Recy_ticketActionCutting);
 
+        hotRecommendation1  = (ImageView) findViewById(R.id.recommendation_1);
+        hotRecommendation2 = (ImageView) findViewById(R.id.recommendation_2);
+        hotRecommendation3 = (ImageView) findViewById(R.id.recommendation_3);
+
+
+
         /**
          * setting 1-1 home Tabbed button and its UI parts
          **/
@@ -73,6 +82,8 @@ public class MainActivity extends AppCompatActivity {
                 layoutUI_Home.setVisibility(View.VISIBLE);
                 layoutUI_TheatreInfo.setVisibility(View.INVISIBLE);
                 layoutUI_ticketOrder.setVisibility(View.INVISIBLE);
+
+
 
             }
         });
@@ -95,7 +106,6 @@ public class MainActivity extends AppCompatActivity {
                 location_text.getPaint().setFlags(Paint. UNDERLINE_TEXT_FLAG); //给“无锡”字下加下划线。
                 recyclerView_theatre.setHasFixedSize(true);
                 recyclerView_theatre.setAdapter(new TheatreAdapter());
-
 
 
             }
@@ -143,7 +153,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     /**
-     * setting news details of home clicker' listener
+     * setting news details of home clicker's listeners
      **/
     public void getNewsDetails(View view){
         switch (view.getId()){
@@ -169,5 +179,27 @@ public class MainActivity extends AppCompatActivity {
                 break;
         }
     }
+
+    /**
+     * setting hotRecommendation of home clicker's listeners
+     **/
+
+    public  void hotRecommendationClick(View view){
+         switch (view.getId()){
+             case R.id.recommendation_1:
+                 Intent intent1 = new Intent(MainActivity.this,HotRecommendation1.class);
+                 startActivity(intent1);
+                 break;
+             case R.id.recommendation_2:
+                 Intent intent2 = new Intent(MainActivity.this,HotRecommendation2.class);
+                 startActivity(intent2);
+                 break;
+             case R.id.recommendation_3:
+                 Intent intent3 = new Intent(MainActivity.this,HotRecommendation3.class);
+                 startActivity(intent3);
+                 break;
+         }
+    }
+
 }
 

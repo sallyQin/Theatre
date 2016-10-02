@@ -18,6 +18,11 @@
             </intent-filter>
         </activity>
         <activity android:name=".ChooseSeatActivity" />
+        <activity android:name=".HotRecommendation1">
+            <intent-filter>
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
         <activity android:name=".detail.News1Activity">
             <intent-filter>
                 <category android:name="android.intent.category.DEFAULT" />
@@ -38,8 +43,19 @@
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
-        <activity android:name=".detail.News5Activity"/>
+        <activity android:name=".detail.News5Activity" />
+        <activity android:name=".HotRecommendation2">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
 
+            </intent-filter>
+        </activity>
+        <activity android:name=".HotRecommendation3">
+            <intent-filter>
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
     </application>
 
 </manifest>

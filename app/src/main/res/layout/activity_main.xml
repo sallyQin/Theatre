@@ -75,19 +75,25 @@
                 android:layout_width="match_parent"
                 android:layout_height="145dp">
                 <ImageView
-                    android:src="@drawable/recommendation1"
+                    android:id="@+id/recommendation_1"
+                    android:src="@drawable/recommendation_1"
                     android:layout_weight="1"
                     android:layout_width="0dp"
+                    android:onClick="hotRecommendationClick"
                     android:layout_height="match_parent" />
                 <ImageView
-                    android:src="@drawable/recommendation2"
+                    android:id="@+id/recommendation_2"
+                    android:src="@drawable/recommendation_2"
                     android:layout_weight="1"
                     android:layout_width="0dp"
+                    android:onClick="hotRecommendationClick"
                     android:layout_height="match_parent" />
                 <ImageView
-                    android:src="@drawable/recommendation3"
+                    android:id="@+id/recommendation_3"
+                    android:src="@drawable/recommendation_3"
                     android:layout_weight="1"
                     android:layout_width="0dp"
+                    android:onClick="hotRecommendationClick"
                     android:layout_height="match_parent" />
             </LinearLayout>
             <LinearLayout
