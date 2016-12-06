@@ -5,5 +5,5 @@
     <color name="colorAccent">#FF4081</color>
     <color name="selector_day">#1E90FF</color>
     <color name="selector_normal_day">#F0F8FF</color>
-
+    <color name="colorBlue">#3A5FCD</color>
 </resources>

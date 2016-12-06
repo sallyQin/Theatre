@@ -8,17 +8,21 @@ import android.os.Handler;
 import android.os.Message;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.text.TextUtils;
 import android.util.DisplayMetrics;
 import android.view.Gravity;
+import android.view.LayoutInflater;
 import android.view.View;
+import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import java.util.ArrayList;
-
 import cn.studyjams.s1.sj52.theatreorder.data.HaiAnTheatreInfo;
-
+import cn.studyjams.s1.sj52.theatreorder.detail.ConfirmUltimateOrderActivity;
 public class ChooseSeatActivity extends AppCompatActivity {
     TextView time;
     TextView actionCutting;
@@ -29,10 +33,16 @@ public class ChooseSeatActivity extends AppCompatActivity {
     TextView booking_txt2;
     TextView booking_txt3;
     TextView booking_txt4;
+    Button button_chooseSeat;
+    String strTitle;//记录订票影片名
+    String version;//记录电影版本
+    String cinemaName;//记录影院名
+    String dateStr;//记录日期
+    String startTime;//记录订票时间
+    String projectionHallNum = "3号厅";//记录厅号（默认为"3号厅"）
 
     public static int width;// 屏幕宽度
     public static int height;// 屏幕高度
-
     private ProgressDialog proDialog;
     TextView hallName;// 影院的影厅名称
     private ImageView mSwitchZoom;// 发大缩小按键
@@ -47,17 +57,43 @@ public class ChooseSeatActivity extends AppCompatActivity {
         setContentView(R.layout.activity_choose_seat);
         HaiAnTheatreInfo data1 = getIntent().getParcelableExtra("data");
         String projectionHall1 = data1.projectionHall;
+        button_chooseSeat = (Button) findViewById(R.id.button_chooseSeat);
+
+
+        /** 设置“跳转完成选座”按钮的事件监听器 **/
+        button_chooseSeat.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(ChooseSeatActivity.this, ConfirmUltimateOrderActivity.class);
+                intent.putExtra("filmTitle", strTitle);
+                intent.putExtra("version",version);
+                intent.putExtra("cinemaName",cinemaName);
+                intent.putExtra("date",dateStr);
+                intent.putExtra("startTime",startTime);
+                intent.putExtra("projectionHallNum",projectionHallNum);
+                if(TextUtils.isEmpty(booking_txt1.getText().toString()) && TextUtils.isEmpty(booking_txt2.getText().toString()) &&
+                    TextUtils.isEmpty(booking_txt3.getText().toString()) && TextUtils.isEmpty(booking_txt4.getText().toString())){
+                    View view = LayoutInflater.from(ChooseSeatActivity.this).inflate(R.layout.my_toast_chooseseat_hint, (ViewGroup) findViewById(R.id.chooseSeat_layout),false);
+                    Toast toast =  Toast.makeText(ChooseSeatActivity.this,"提示：请先选择座位！",Toast.LENGTH_LONG);
+                    toast.setView(view);
+                    toast.show();
+            }else {
+                    startActivity(intent);
+                }
+        }});
 
 
         /**若是3，加载“3号厅”布局 **/
         if (projectionHall1.equals("3号厅")) {
             add();        //添加座位号信息
             initView();   //初始化影院订座主图
+
         }
         /**若是2，加载“2号厅”布局 **/
         else if (projectionHall1.equals("2号厅")){
             add2HallingInfo();
             initViewHall2();
+            projectionHallNum = "2号厅";
         }
         /**其它默认情况：加载“3号厅”布局**/
         else{
@@ -69,37 +105,35 @@ public class ChooseSeatActivity extends AppCompatActivity {
         booking_txt2 = (TextView) findViewById(R.id.booking_text2);
         booking_txt3 = (TextView) findViewById(R.id.booking_text3);
         booking_txt4 = (TextView) findViewById(R.id.booking_text4);
-
-
-
         time = (TextView) findViewById(R.id.time_txt);
         actionCutting = (TextView) findViewById(R.id.ActionCutting_txt);
         filmTitle = (TextView) findViewById(R.id.filmTitle);
         actionCutting_Title = (TextView) findViewById(R.id.actionCutting_Title);
 
         Intent intent = getIntent();
-        String strTitle = intent.getStringExtra("filmTitle");//设置跳转过来的 订票影片名
+        strTitle = intent.getStringExtra("filmTitle");//设置跳转过来的 订票影片名
         filmTitle.setText(strTitle);
 
         day_txt = (TextView) findViewById(R.id.day_txt);     //设置跳转过来的 订票日期
         if (day_txt != null) {
             day_txt.setText(TicketOrderDateAdapter.date_done);
+            dateStr = day_txt.getText().toString();
         }
 
         HaiAnTheatreInfo data = intent.getParcelableExtra("data");
-        String stra = data.startTime;
-        String edit = data.edition;
+        startTime = data.startTime;
+        version = data.edition;
 
-        time.setText(stra);                                  //设置跳转过来的 订票时间
-        actionCutting.setText(edit);                         //设置跳转过来的 订票场次
+        time.setText(startTime);                                  //设置跳转过来的 订票时间
 
-        String actionCuttingText = intent.getStringExtra("ticket_location_title");
-        actionCutting_Title.setText(actionCuttingText);       //设置传过来的 订票页面标题名
+        actionCutting.setText(version);                         //设置跳转过来的 订票场次
 
+        cinemaName = intent.getStringExtra("ticket_location_title");
+        actionCutting_Title.setText(cinemaName);       //设置传过来的 订票页面标题名(影院名)
     }
 
 
-
+    /** 设置初始视图界面 **/
     private void initView() {
         DisplayMetrics displayMetrics = new DisplayMetrics();
         getWindowManager().getDefaultDisplay().getMetrics(displayMetrics); //取得的屏幕宽、高维度

@@ -1,6 +1,7 @@
 package cn.studyjams.s1.sj52.theatreorder;
 
 
+import android.provider.ContactsContract;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -18,7 +19,12 @@ import cn.studyjams.s1.sj52.theatreorder.data.Theatre_info;
 public class TheatreAdapter extends RecyclerView.Adapter {
     public static MainActivity mainActivityThea;
 
-
+    LinearLayout linearlayout_arrow;
+    LinearLayout linearlayout_arrow1;
+    LinearLayout linearlayout_arrow2;
+    LinearLayout linearlayout_arrow3;
+    LinearLayout linearlayout_arrow4;
+    LinearLayout linearlayout_arrow5;
 
     ImageView imageView_arrow;
     ImageView image_arrow1;
@@ -82,13 +88,18 @@ public class TheatreAdapter extends RecyclerView.Adapter {
         theatre_location3 = holder.itemView.findViewById(R.id.theatre_location3);
         theatre_location4 = holder.itemView.findViewById(R.id.theatre_location4);
         theatre_location5 = holder.itemView.findViewById(R.id.theatre_location5);
+        linearlayout_arrow = (LinearLayout) holder.itemView.findViewById(R.id.theatre_recycler_favorite);
+        linearlayout_arrow1 = (LinearLayout) holder.itemView.findViewById(R.id.theatre_recycler_1);
+        linearlayout_arrow2 = (LinearLayout) holder.itemView.findViewById(R.id.theatre_recycler_2);
+        linearlayout_arrow3 = (LinearLayout) holder.itemView.findViewById(R.id.theatre_recycler_3);
+        linearlayout_arrow4 = (LinearLayout) holder.itemView.findViewById(R.id.theatre_recycler_4);
+        linearlayout_arrow5 = (LinearLayout) holder.itemView.findViewById(R.id.theatre_recycler_5);
         imageView_arrow = (ImageView) holder.itemView.findViewById(R.id.arrow_theatre_recycler_favorite);
         image_arrow1 = (ImageView) holder.itemView.findViewById(R.id.arrow_theatre_recycler_1);
         image_arrow2 = (ImageView) holder.itemView.findViewById(R.id.arrow_theatre_recycler_2);
         image_arrow3 = (ImageView) holder.itemView.findViewById(R.id.arrow_theatre_recycler_3);
         image_arrow4 = (ImageView) holder.itemView.findViewById(R.id.arrow_theatre_recycler_4);
         image_arrow5 = (ImageView) holder.itemView.findViewById(R.id.arrow_theatre_recycler_5);
-
 
         liangxiDis_1 = (LinearLayout) holder.itemView.findViewById(R.id.liangxiDis_1);
         liangxiDis_2 = (LinearLayout) holder.itemView.findViewById(R.id.liangxiDis_2);
@@ -153,9 +164,9 @@ public class TheatreAdapter extends RecyclerView.Adapter {
                 ticketOrderPokerAdapter.mainActi = mainActivityThea;
                 mainActivityThea.recyclerView_ticketOrder_poker.setAdapter(ticketOrderPokerAdapter);//海报 切换
 
-               mainActivityThea.recy_ticketDate.setAdapter(new TicketOrderDateAdapter() );//日期 切换
+                mainActivityThea.recy_ticketDate.setAdapter(new TicketOrderDateAdapter() );//日期 切换
 
-               mainActivityThea. recy_ticketActionCutting.setAdapter( mainActivityThea.ticketActionCuttingAdapter);//场次 切换
+                mainActivityThea. recy_ticketActionCutting.setAdapter( mainActivityThea.ticketActionCuttingAdapter);//场次 切换
 
 
             }
@@ -387,7 +398,7 @@ public class TheatreAdapter extends RecyclerView.Adapter {
             }
         });
 
-       binghuDis_2.setOnClickListener(new View.OnClickListener() {
+        binghuDis_2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 theatreName_selected = Theatre_info.theatreName[10];
@@ -476,7 +487,7 @@ public class TheatreAdapter extends RecyclerView.Adapter {
         /**
          * setting 5 arrow up or down buttons' listener separately
          * */
-        imageView_arrow.setOnClickListener(new View.OnClickListener() {
+        linearlayout_arrow.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 if (flagFavoriteArrow) {
@@ -492,7 +503,7 @@ public class TheatreAdapter extends RecyclerView.Adapter {
         });
 
 
-        image_arrow1.setOnClickListener(new View.OnClickListener() {
+        linearlayout_arrow1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 if (flagArrow1) {
@@ -508,7 +519,7 @@ public class TheatreAdapter extends RecyclerView.Adapter {
         });
 
 
-        image_arrow2.setOnClickListener(new View.OnClickListener() {
+        linearlayout_arrow2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 if (flagArrow2) {
@@ -524,7 +535,7 @@ public class TheatreAdapter extends RecyclerView.Adapter {
         });
 
 
-        image_arrow3.setOnClickListener(new View.OnClickListener() {
+        linearlayout_arrow3.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 if (flagArrow3) {
@@ -540,7 +551,7 @@ public class TheatreAdapter extends RecyclerView.Adapter {
         });
 
 
-        image_arrow4.setOnClickListener(new View.OnClickListener() {
+        linearlayout_arrow4.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 if (flagArrow4) {
@@ -556,7 +567,7 @@ public class TheatreAdapter extends RecyclerView.Adapter {
         });
 
 
-        image_arrow5.setOnClickListener(new View.OnClickListener() {
+        linearlayout_arrow5.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 if (flagArrow5) {

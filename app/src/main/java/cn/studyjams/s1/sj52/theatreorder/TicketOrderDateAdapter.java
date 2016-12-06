@@ -14,7 +14,7 @@ import cn.studyjams.s1.sj52.theatreorder.data.Theatre_info;
 public class TicketOrderDateAdapter extends RecyclerView.Adapter {
     TextView date_text;
     View underline;
-    protected static String date_done ="今日";
+    static String date_done ="今日";
 
     int selected;
 

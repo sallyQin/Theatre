@@ -8,6 +8,7 @@ import android.graphics.Canvas;
 import android.graphics.Color;
 import android.graphics.Paint;
 import android.graphics.Typeface;
+import android.os.Bundle;
 import android.view.MotionEvent;
 import android.view.View;
 import android.widget.LinearLayout;
@@ -54,7 +55,7 @@ public class MovieSeatViewUtil extends View {
     ArrayList<Integer> checkSeatNO;  //查看位置状态
     String checkSeatStatusTemp;  //查看位置状态
     private int width_1,height_1;
-    ArrayList checkSeatStatus = new ArrayList();
+    public static ArrayList checkSeatStatus = new ArrayList();
     Map<Integer,String> sortSelectedSeat = new HashMap<>();
 
 
@@ -83,8 +84,7 @@ public class MovieSeatViewUtil extends View {
         lieList = new ArrayList<>();
         seatStateList = new ArrayList<>();
         seatTypeList = new ArrayList<>();
-
-
+        checkSeatStatus.clear(); //初始化时，清除之前的选座数据
 
         for (int i = 0; i < SeatModelList.size(); i++) {
             String lieStr = SeatModelList.get(i).getColumnNo();
@@ -266,7 +266,6 @@ public class MovieSeatViewUtil extends View {
                                 mySeatList.remove(mySeatList.indexOf(newClick));
                                 mySeatList.remove(mySeatList.indexOf(newClick + 1));
 
-
                                 checkSeatStatus.remove(sortSelectedSeat.get(newClick));        //删除ArrayList（用于TextView选座排序。）
                                 checkSeatStatus.remove (sortSelectedSeat.get(newClick + 1));   //删除ArrayList（用于TextView选座排序。）
                                 sortSelectedSeat.remove(newClick);
@@ -285,7 +284,6 @@ public class MovieSeatViewUtil extends View {
                             } else if (rightEdgeDelete(newClick, seatCount)) {
                                 mySeatList.remove(mySeatList.indexOf(newClick));
                                 mySeatList.remove(mySeatList.indexOf(newClick - 1));
-
 
                                 checkSeatStatus.remove(sortSelectedSeat.get(newClick));        //删除ArrayList（用于TextView选座排序。）
                                 checkSeatStatus.remove (sortSelectedSeat.get(newClick -1));    //删除ArrayList（用于TextView选座排序。）
@@ -342,7 +340,6 @@ public class MovieSeatViewUtil extends View {
                                                 + seatColumn.get(newClick) + "列",
                                         Toast.LENGTH_SHORT).show();
 
-
                             } else {
                                 Toast.makeText(mContext, "对不起，每位顾客最多只能选取4个座位！",
                                        Toast.LENGTH_SHORT).show();
@@ -364,9 +361,7 @@ public class MovieSeatViewUtil extends View {
 
     /** 选座排序并显示在textView中。**/
     private void updateSelectedTextViews() {
-
         ChooseSeatActivity chooseSeatActi = (ChooseSeatActivity) getContext();
-
         Collections.sort(checkSeatStatus);
         if(checkSeatStatus.size() == 1){
             chooseSeatActi.booking_txt1.setText((CharSequence) checkSeatStatus.get(0));
@@ -379,12 +374,14 @@ public class MovieSeatViewUtil extends View {
             chooseSeatActi.booking_txt2.setText((CharSequence) checkSeatStatus.get(1));
             chooseSeatActi.booking_txt3.setText("");
             chooseSeatActi.booking_txt4.setText("");
+
         }
         else if(checkSeatStatus.size() == 3){
             chooseSeatActi.booking_txt1.setText((CharSequence) checkSeatStatus.get(0));
             chooseSeatActi.booking_txt2.setText((CharSequence) checkSeatStatus.get(1));
             chooseSeatActi.booking_txt3.setText((CharSequence) checkSeatStatus.get(2));
             chooseSeatActi.booking_txt4.setText("");
+
         }
         else if(checkSeatStatus.size() == 4){
             chooseSeatActi.booking_txt1.setText((CharSequence) checkSeatStatus.get(0));

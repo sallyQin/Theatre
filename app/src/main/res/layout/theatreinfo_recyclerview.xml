@@ -5,6 +5,8 @@
     android:layout_height="match_parent">
 
     <LinearLayout
+        android:onClick="arrow_button"
+        android:id="@+id/theatre_recycler_favorite"
         android:orientation="horizontal"
         android:background="#63B8FF"
         android:layout_width="match_parent"
@@ -21,7 +23,6 @@
             android:layout_weight="1"
             android:layout_height="match_parent" />
         <ImageView
-            android:onClick="arrow_button"
             android:id="@+id/arrow_theatre_recycler_favorite"
             android:layout_marginRight="15dp"
             android:layout_gravity="center_vertical"
@@ -108,6 +109,8 @@
 
 
     <LinearLayout
+        android:id="@+id/theatre_recycler_1"
+        android:onClick="arrow_button"
         android:orientation="horizontal"
         android:background="#63B8FF"
         android:layout_width="match_parent"
@@ -124,7 +127,6 @@
             android:layout_height="match_parent" />
         <ImageView
             android:id="@+id/arrow_theatre_recycler_1"
-            android:onClick="arrow_button"
             android:layout_marginRight="15dp"
             android:layout_width="18dp"
             android:layout_height="15dp"
@@ -260,7 +262,7 @@
                 <TextView
                     android:layout_marginLeft="15dp"
                     android:gravity="center"
-                    android:text="45"
+                    android:text="35"
                     android:textStyle="bold"
                     android:textSize="14sp"
                     android:textColor="#CD2626"
@@ -326,6 +328,8 @@
 
 
     <LinearLayout
+        android:id="@+id/theatre_recycler_2"
+        android:onClick="arrow_button"
         android:orientation="horizontal"
         android:background="#63B8FF"
         android:layout_width="match_parent"
@@ -342,7 +346,6 @@
             android:layout_height="match_parent" />
         <ImageView
             android:id="@+id/arrow_theatre_recycler_2"
-            android:onClick="arrow_button"
             android:layout_marginRight="15dp"
             android:layout_gravity="center_vertical"
             android:gravity="right|center"
@@ -456,6 +459,8 @@
 
 
     <LinearLayout
+        android:id="@+id/theatre_recycler_3"
+        android:onClick="arrow_button"
         android:orientation="horizontal"
         android:background="#63B8FF"
         android:layout_width="match_parent"
@@ -472,7 +477,6 @@
             android:layout_height="match_parent" />
         <ImageView
             android:id="@+id/arrow_theatre_recycler_3"
-            android:onClick="arrow_button"
             android:layout_marginRight="15dp"
             android:layout_gravity="center_vertical"
             android:gravity="right|center"
@@ -510,7 +514,7 @@
                 <TextView
                     android:layout_marginLeft="15dp"
                     android:gravity="center"
-                    android:text="45"
+                    android:text="35"
                     android:textStyle="bold"
                     android:textSize="14sp"
                     android:textColor="#CD2626"
@@ -576,6 +580,8 @@
 
 
     <LinearLayout
+        android:id="@+id/theatre_recycler_4"
+        android:onClick="arrow_button"
         android:orientation="horizontal"
         android:background="#63B8FF"
         android:layout_width="match_parent"
@@ -592,7 +598,6 @@
             android:layout_height="match_parent" />
         <ImageView
             android:id="@+id/arrow_theatre_recycler_4"
-            android:onClick="arrow_button"
             android:layout_marginRight="15dp"
             android:layout_gravity="center_vertical"
             android:gravity="right|center"
@@ -706,6 +711,8 @@
 
 
     <LinearLayout
+        android:id="@+id/theatre_recycler_5"
+        android:onClick="arrow_button"
         android:orientation="horizontal"
         android:background="#63B8FF"
         android:layout_width="match_parent"
@@ -722,7 +729,6 @@
             android:layout_height="match_parent" />
         <ImageView
             android:id="@+id/arrow_theatre_recycler_5"
-            android:onClick="arrow_button"
             android:layout_marginRight="15dp"
             android:layout_gravity="center_vertical"
             android:gravity="right|center"

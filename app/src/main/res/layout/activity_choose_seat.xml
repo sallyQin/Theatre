@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/chooseSeat_layout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#EDEDED"
@@ -10,13 +11,13 @@
 
     <TextView
         android:id="@+id/actionCutting_Title"
-        android:background="#3A5FCD"
+        android:background="@android:color/white"
         android:layout_width="match_parent"
-        android:layout_height="55dp"
+        android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
         android:gravity="center"
         android:textColor="@android:color/white"
-        android:textSize="20sp"
+        android:textSize="24sp"
         android:textStyle="bold" />
 
     <LinearLayout
@@ -144,17 +145,18 @@
             android:orientation="vertical"
             android:layout_height="match_parent"
             android:layout_width="match_parent">
-           <RelativeLayout
+            <RelativeLayout
                 android:layout_height="wrap_content"
-                android:layout_width="fill_parent"
-                android:id="@+id/seat1">
+                android:layout_width="match_parent"
+                android:id="@+id/seat_id">
 
                 <ImageView
                     android:background="@drawable/movie_buy_screen"
                     android:layout_height="wrap_content"
                     android:layout_width="wrap_content"
                     android:id="@+id/imageView1"
-                    android:layout_margin="10dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
                     android:layout_centerInParent="true"/>
 
             </RelativeLayout>
@@ -162,9 +164,9 @@
             <RelativeLayout
                 android:orientation="horizontal"
                 android:layout_height="wrap_content"
-                android:layout_width="fill_parent"
+                android:layout_width="match_parent"
                 android:id="@+id/seat2"
-                android:layout_alignTop="@id/seat1">
+                android:layout_alignTop="@id/seat_id">
 
                 <TextView
                     android:layout_height="wrap_content"
@@ -175,11 +177,11 @@
                     android:textColor="#708090"
                     android:textStyle="bold"
                     android:text="3号厅"
-                    android:gravity="center_horizontal"/>
+                    android:gravity="center"/>
 
                 <ImageView
-                    android:layout_height="40dp"
-                    android:layout_width="40dp"
+                    android:layout_height="38dp"
+                    android:layout_width="38dp"
                     android:id="@+id/setViewZoom"
                     android:src="@drawable/movie_tobig"
                     android:layout_alignParentRight="true"/>
@@ -292,6 +294,20 @@
             android:text="选中"
             android:layout_height="match_parent" />
     </LinearLayout>
+
+    <Button
+        android:id="@+id/button_chooseSeat"
+        android:paddingLeft="8dp"
+        android:paddingRight="8dp"
+        android:layout_gravity="center_horizontal"
+        android:textColor="#FFFFFF"
+        android:background="@drawable/shape_button_chooseseat"
+        android:textStyle="bold"
+        android:textSize="16sp"
+        android:text="@string/confirm_choose_btn"
+        android:layout_marginBottom="20dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
 
 
 </LinearLayout>

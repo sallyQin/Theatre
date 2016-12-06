@@ -9,8 +9,6 @@ import android.view.View;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
-
-
 import cn.studyjams.s1.sj52.theatreorder.detail.News1Activity;
 import cn.studyjams.s1.sj52.theatreorder.detail.News2Activity;
 import cn.studyjams.s1.sj52.theatreorder.detail.News3Activity;
@@ -144,7 +142,6 @@ public class MainActivity extends AppCompatActivity {
                 recy_ticketDate.setAdapter(new TicketOrderDateAdapter() );//日期 切换
 
                 recy_ticketActionCutting.setAdapter( ticketActionCuttingAdapter);//场次 切换
-
 
 
             }

@@ -19,6 +19,11 @@
     <string name="movie_seat_ok_txt">可选</string>
     <string name="movie_seat_sold_txt">已售</string>
     <string name="movie_seat_select_txt">选中</string>
+    <string name="confirm_choose_btn">跳转完成选座</string>
+    <string name="ticketTitle">电影票</string>
+    <string name="confirm_order">确定下单</string>
+
+
     <!--<string name="favoratelocation_tx">你可能想去的影院</string>-->
     <!--<string name="location_tx1">梁溪区</string>-->
     <!--<string name="location_tx2">锡山区</string>-->
