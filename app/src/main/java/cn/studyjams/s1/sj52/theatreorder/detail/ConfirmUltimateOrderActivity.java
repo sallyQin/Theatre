@@ -54,6 +54,7 @@ public class ConfirmUltimateOrderActivity extends AppCompatActivity {
     int total_orderSum;//套餐花费
     int total_ticketSum;//票价小计额
 
+    private int mLastSelectedIndex;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -152,7 +153,9 @@ public class ConfirmUltimateOrderActivity extends AppCompatActivity {
             @Override
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
                 if (isChecked) {
-                    spinner.setSelection(1);
+                    if (mLastSelectedIndex <= 0) {
+                        spinner.setSelection(1);
+                    }
                 } else if (!isChecked) {
                     spinner.setSelection(0);
                 }
@@ -166,6 +169,7 @@ public class ConfirmUltimateOrderActivity extends AppCompatActivity {
         spinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+                mLastSelectedIndex = position;
                 if (getResources().getStringArray(R.array.spinner)[position].equals("0 份")) {
                     notifyTotalSumChanged(0); //通知“消费总额”数据更新
                     checkbox_coupleSuit.setChecked(false);//使checkbox 不处于“√”状态
