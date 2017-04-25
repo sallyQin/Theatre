@@ -8,7 +8,8 @@
 ######            * 3.2 可选择具体的观影场次，并进入相应的选座页面。
 ######            * 3.3 进入订票结算页面。
       
-####### 演示：
+###### 演示：
+
 ![image](https://github.com/sallyQin/Theatre/raw/master/app/src/main/res/drawable/bookingshow1.gif) 
 
 ![image](https://github.com/sallyQin/Theatre/raw/master/app/src/main/res/drawable/readme_2.png) 
