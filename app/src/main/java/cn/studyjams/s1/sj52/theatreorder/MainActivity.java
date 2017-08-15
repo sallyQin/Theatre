@@ -56,7 +56,7 @@ public class MainActivity extends AppCompatActivity {
 
         location_text = (TextView) findViewById(R.id.location_text);
         recyclerView_theatre = (RecyclerView) findViewById(R.id.Recy_theatreInfo);
-        recyclerView_ticketOrder_poker = (RecyclerView) findViewById(R.id.Recy_ticketOrder_poker);
+        recyclerView_ticketOrder_poker = (RecyclerView) findViewById(R.id.Recy_ticketOrder_poker); // Poster背景 （RecyclerView ）
         recy_ticketDate = (RecyclerView) findViewById(R.id.Recy_ticketDate);
         recy_ticketActionCutting = (RecyclerView) findViewById(R.id.Recy_ticketActionCutting);
 

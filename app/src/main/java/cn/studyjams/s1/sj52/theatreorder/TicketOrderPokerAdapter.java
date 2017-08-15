@@ -1,27 +1,21 @@
 package cn.studyjams.s1.sj52.theatreorder;
 
-import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.graphics.Matrix;
 import android.graphics.drawable.BitmapDrawable;
 import android.graphics.drawable.Drawable;
-import android.os.Bundle;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
-
-import java.io.InputStream;
-
 import cn.studyjams.s1.sj52.theatreorder.data.Theatre_info;
-import cn.studyjams.s1.sj52.theatreorder.detail.ConfirmUltimateOrderActivity;
 
 /**
  * Created by Apc on 2016/9/1.
  */
-public class TicketOrderPokerAdapter extends RecyclerView.Adapter<TicketOrderPokerAdapter.Holder> {
+public class TicketOrderPokerAdapter extends RecyclerView.Adapter<TicketOrderPokerAdapter.Holder> { //“订座”Tab栏中海报部分的adapter
 
     public MainActivity mainActi;
     static int selected_poster = -1;
@@ -97,7 +91,7 @@ public class TicketOrderPokerAdapter extends RecyclerView.Adapter<TicketOrderPok
 
 
     /**  Bitmap缩放 **/
-    public static Bitmap zoomBitmap(Bitmap oldBitmap, double width, double height) {
+    public static Bitmap zoomBitmap(Bitmap oldBitmap, double width, double height) { //根据用户选中的poster图，进行zoom放大bitmap背景图
         int w = oldBitmap.getWidth();
         int h = oldBitmap.getHeight();
         Matrix matrix = new Matrix();

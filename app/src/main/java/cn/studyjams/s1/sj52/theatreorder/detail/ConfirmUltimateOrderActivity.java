@@ -30,7 +30,7 @@ import static cn.studyjams.s1.sj52.theatreorder.data.Theatre_info.*;
  * Created by 1 on 2016/12/1.
  */
 
-public class ConfirmUltimateOrderActivity extends AppCompatActivity {
+public class ConfirmUltimateOrderActivity extends AppCompatActivity {  //最终结账界面
     private Spinner spinner;
     TextView oldPrice;
     TextView seat_txt;

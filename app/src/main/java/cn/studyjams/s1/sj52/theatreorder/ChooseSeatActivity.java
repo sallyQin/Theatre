@@ -23,7 +23,7 @@ import android.widget.Toast;
 import java.util.ArrayList;
 import cn.studyjams.s1.sj52.theatreorder.data.HaiAnTheatreInfo;
 import cn.studyjams.s1.sj52.theatreorder.detail.ConfirmUltimateOrderActivity;
-public class ChooseSeatActivity extends AppCompatActivity {
+public class ChooseSeatActivity extends AppCompatActivity {  //选座界面
     TextView time;
     TextView actionCutting;
     TextView filmTitle;
@@ -47,7 +47,9 @@ public class ChooseSeatActivity extends AppCompatActivity {
     TextView hallName;// 影院的影厅名称
     private ImageView mSwitchZoom;// 发大缩小按键
     private MovieSeatViewUtil seatView;
+    private MovieSeatViewUtil seatView_2Hall;
     private boolean setZoom = false;// 设置view的放大缩小
+    private boolean setZoom_2Hall = false;// 设置view的放大缩小
     ArrayList<MovieRealTimeHallAllSeats> SeatModelListHall2;   //2号厅座位图数据
     ArrayList<MovieRealTimeHallAllSeats> SeatModelListHall3;   //3号厅座位图数据
 
@@ -345,17 +347,16 @@ public class ChooseSeatActivity extends AppCompatActivity {
         mSwitchZoom.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
-                if (!setZoom) {
-                    seatView.SetZoom(0);
-                    mSwitchZoom.setImageDrawable(getResources().getDrawable(
-                            R.drawable.movie_tosmall));
-                    setZoom = true;
-                } else  {
-                    seatView.SetZoom(1);
+                if (!setZoom_2Hall) {
+                    seatView_2Hall.SetZoom(1);
                     mSwitchZoom.setImageDrawable(getResources().getDrawable(
                             R.drawable.movie_tobig));
-                    setZoom = false;
+                    setZoom_2Hall = true;
+                } else  {
+                    seatView_2Hall.SetZoom(0);
+                    mSwitchZoom.setImageDrawable(getResources().getDrawable(
+                            R.drawable.movie_tosmall));
+                    setZoom_2Hall = false;
                 }
             }
         });
@@ -384,21 +385,21 @@ public class ChooseSeatActivity extends AppCompatActivity {
         if (myView != null) {
             myView.removeAllViews();
         }
-        seatView = new MovieSeatViewUtil(this, SeatModelListHall2);
+        seatView_2Hall = new MovieSeatViewUtil(this, SeatModelListHall2);
         if (myView != null) {
-            myView.addView(seatView);
+            myView.addView(seatView_2Hall);
         }
-        seatView.setZoomChangeListener(new MovieSeatViewUtil.ZoomChangeListener() {
+        seatView_2Hall.setZoomChangeListener(new MovieSeatViewUtil.ZoomChangeListener() {
             public void ZoomChange(int box_size, int zoom_level,
                                    boolean isBigZoom) {
                 if (!isBigZoom) {  //点击缩小
                     mSwitchZoom.setImageDrawable(getResources().getDrawable(
                             R.drawable.movie_tobig));
-                    setZoom = false;
+                    setZoom_2Hall = false;
                 } else {
                     mSwitchZoom.setImageDrawable(getResources().getDrawable(
                             R.drawable.movie_tosmall));
-                    setZoom = true;
+                    setZoom_2Hall = true;
                 }
                 LinearLayout myView1 = (LinearLayout) findViewById(R.id.seatRaw);
                 assert myView1 != null;

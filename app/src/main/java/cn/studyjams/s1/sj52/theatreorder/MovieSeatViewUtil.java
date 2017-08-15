@@ -23,7 +23,7 @@ import java.util.Map;
 /**
  * Created by Apc on 2016/9/14.
  */
-public class MovieSeatViewUtil extends View {
+public class MovieSeatViewUtil extends View {   // 自定义订票座位的View
 
     private Context mContext;
     private ZoomChangeListener OnZoomChangeListener = null;
