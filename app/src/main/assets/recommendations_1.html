@@ -16,7 +16,7 @@
 <link rel="stylesheet" type="text/css" href="/public/movie/index.css" />
 <link rel="stylesheet" type="text/css" href="/public/common/plug/lightbox/jquery.lightbox.css" />
 <link rel="stylesheet" type="text/css" href="/public/common/boxy.css" />
-<title>湄公河行动(9月30日上映)</title>
+<title>湄公河行动</title>
     <script>
         var ip="180.153.219.15";
     </script>
@@ -27,8 +27,6 @@
 <div id="page_content">
     <!--公共头部开始-->
 
-<!--在线客服结束-->
-
 
 
 
@@ -38,35 +36,7 @@
     .nav_content .nav_center .nav_left{margin-top:13px;position: relative;}
     #current_city{ position: absolute;left:130px;top:13px;z-index:11;height:auto;}
 </style>
-<script>
-    window.onload=function(){
-        var checknNav="";
-        $(".nav_right .nav_word a").hover(
-            function () {
-                for(var i=0;i<$(".nav_word p").length;i++){
-                    var classs=($(".nav_word p").eq(i).attr("class")).split(" ");
-                    if(classs[1]=="nav_current"){
-                        checknNav=i;
-                    }
-                }
-                $(".nav_right .nav_word a").removeClass("font_color6");
-                $(this).addClass("font_color6");
-                $(".nav_right p").removeClass("nav_current");
-                $(this).prev().addClass("nav_current");
-            },
-            function () {
-                $(".nav_right .nav_word a").removeClass("font_color6");
-                $(".nav_right p").removeClass("nav_current");
-            }
-        );
-        $(".nav_right").mouseleave(function(){
-            if(checknNav!=""){
-                $(".nav_word p").eq(checknNav).addClass("nav_current");
-                $(".nav_word p").eq(checknNav).next().addClass("font_color6");
-            }
-        })
-    }
-</script>
+
 
 
 
@@ -111,7 +81,7 @@
                             <a class="introduce_title" target="_blank"><h1>湄公河行动</h1></a>
                             <p>
                         <span class="introduce_score">
-                                                                                        <font>8.2</font>分
+                                                                                        <font>8.4</font>分
 
                         </span>
                                 <span>导演：林超贤</span>

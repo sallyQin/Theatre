@@ -60,7 +60,10 @@
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
-
+        <activity android:name=".detail.ComingSoonFilmsActivity"></activity>
+        <provider
+            android:authorities="sally.theatreOrder"
+            android:name=".data.ComingSoonContentProvider"/>
     </application>
-
+    
 </manifest>

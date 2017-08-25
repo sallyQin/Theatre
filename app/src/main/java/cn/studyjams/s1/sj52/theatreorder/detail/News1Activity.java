@@ -17,7 +17,6 @@ public class News1Activity extends AppCompatActivity{
         setContentView(R.layout.activity_news1);
         webView_context1 = (WebView) findViewById(R.id.webView_context1);
         assert webView_context1 != null;
-        webView_context1.loadUrl("file:///android_asset/9.html");
-
+        webView_context1.loadUrl("file:///android_asset/disney.html");
     }
 }

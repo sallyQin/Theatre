@@ -9,6 +9,10 @@ import android.view.View;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
+
+import com.facebook.drawee.view.SimpleDraweeView;
+
+import cn.studyjams.s1.sj52.theatreorder.detail.ComingSoonFilmsActivity;
 import cn.studyjams.s1.sj52.theatreorder.detail.News1Activity;
 import cn.studyjams.s1.sj52.theatreorder.detail.News2Activity;
 import cn.studyjams.s1.sj52.theatreorder.detail.News3Activity;
@@ -37,7 +41,12 @@ public class MainActivity extends AppCompatActivity {
     RecyclerView recy_ticketDate;
     RecyclerView recy_ticketActionCutting;
     TicketActionCuttingAdapter ticketActionCuttingAdapter;
-
+    TextView txt_likes1,txt_likes2,txt_likes3;
+    SimpleDraweeView selected_pic1,selected_pic2,selected_pic3;
+    TextView comingSoon_more_txt;
+    Boolean selected_like1 = false;
+    Boolean selected_like2 = false;
+    Boolean selected_like3 = false;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -64,7 +73,22 @@ public class MainActivity extends AppCompatActivity {
         hotRecommendation2 = (ImageView) findViewById(R.id.recommendation_2);
         hotRecommendation3 = (ImageView) findViewById(R.id.recommendation_3);
 
+        txt_likes1 = (TextView) findViewById(R.id.txt_likes1);
+        txt_likes2 = (TextView) findViewById(R.id.txt_likes2);
+        txt_likes3 = (TextView) findViewById(R.id.txt_likes3);
 
+        selected_pic1 = (SimpleDraweeView) findViewById(R.id.selected_pic1);
+        selected_pic2 = (SimpleDraweeView) findViewById(R.id.selected_pic2);
+        selected_pic3 = (SimpleDraweeView) findViewById(R.id.selected_pic3);
+
+        comingSoon_more_txt = (TextView) findViewById(R.id.comingSoon_more);
+        comingSoon_more_txt.setOnClickListener(new View.OnClickListener() { //点击更多的“即将上映的影片”
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, ComingSoonFilmsActivity.class);
+                startActivity(intent);
+            }
+        });
 
         /**
          * setting 1-1 home Tabbed button and its UI parts
@@ -196,6 +220,48 @@ public class MainActivity extends AppCompatActivity {
                  startActivity(intent3);
                  break;
          }
+    }
+
+    /**
+     * setting ComingSoon of home clicker's listeners
+     **/
+
+    public  void comingSoonClick(View view){
+        switch (view.getId()){
+            case R.id.like_coming_1:
+                if(!selected_like1){
+                    txt_likes1.setText("501");
+                    selected_pic1.setSelected(true);
+                    selected_like1 = true;
+                }else{
+                    txt_likes1.setText("500");
+                    selected_pic1.setSelected(false);
+                    selected_like1 = false;
+                }
+                break;
+            case R.id.like_coming_2:
+                if(!selected_like2){
+                    txt_likes2.setText("501");
+                    selected_pic2.setSelected(true);
+                    selected_like2 = true;
+                }else{
+                    txt_likes2.setText("500");
+                    selected_pic2.setSelected(false);
+                    selected_like2 = false;
+                }
+                break;
+            case R.id.like_coming_3:
+                if(!selected_like3){
+                    txt_likes3.setText("501");
+                    selected_pic3.setSelected(true);
+                    selected_like3 = true;
+                }else{
+                    txt_likes3.setText("500");
+                    selected_pic3.setSelected(false);
+                    selected_like3 = false;
+                }
+                break;
+        }
     }
 
 }

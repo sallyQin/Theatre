@@ -14,6 +14,6 @@ public class News3Activity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_news3);
         webView_context3 = (WebView) findViewById(R.id.webView_context3);
-        webView_context3.loadUrl("file:///android_asset/8.html");
+        webView_context3.loadUrl("file:///android_asset/3.html");
     }
 }

@@ -9,9 +9,9 @@
     <string name="recommendation">热门推荐</string>
     <string name="news">最新资讯</string>
     <string name="notice">温馨提示： 电影开映前15分钟内订票无效。</string>
-    <string name="news_pic1_txt">2016年9月内地影市前瞻</string>
+    <string name="news_pic1_txt">专访迪士尼《超能陆战队》主创</string>
     <string name="news_pic2_txt">暑期档今年格外“冷”</string>
-    <string name="news_pic3_txt">2016年8月中国内地影市前瞻</string>
+    <string name="news_pic3_txt">2017年3月中国内地影市前瞻</string>
     <string name="news_pic4_txt">2016年7月内地影市前瞻</string>
     <string name="news_pic5_txt">2016年上半年中国票房最佳Top10</string>
     <string name="action_settings">设置</string>
@@ -22,14 +22,10 @@
     <string name="confirm_choose_btn">跳转完成选座</string>
     <string name="ticketTitle">电影票</string>
     <string name="confirm_order">确定下单</string>
-
-
-    <!--<string name="favoratelocation_tx">你可能想去的影院</string>-->
-    <!--<string name="location_tx1">梁溪区</string>-->
-    <!--<string name="location_tx2">锡山区</string>-->
-    <!--<string name="location_tx3">惠山区</string>-->
-    <!--<string name="location_tx4">滨湖区</string>-->
-    <!--<string name="location_tx5">新吴区</string>-->
-
+    <string name="comingSoon_strings">即将上映</string>
+    <string name="comingSoon_more">共35部电影，查看全部>></string>
+    <string name="August_title_txt">8月（9部）</string>
+    <string name="September_title_txt">9月（18部）</string>
+    <string name="Delimiter">| </string>
 
 </resources>
