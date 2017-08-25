@@ -10,7 +10,7 @@
       
 ###### 演示：
 
-![image](https://github.com/sallyQin/Theatre/raw/master/app/src/main/res/drawable/readme_display.gif) 
+![image](https://github.com/sallyQin/Theatre/raw/master/app/src/main/res/drawable/bookingshow1.gif) 
 
 ![image](https://github.com/sallyQin/Theatre/raw/master/app/src/main/res/drawable/readme_2.png) 
 ![image](https://github.com/sallyQin/Theatre/raw/master/app/src/main/res/drawable/readme_3.png) 
